@@ -14,7 +14,7 @@ def home(request):
     if request.method == 'POST':
         city = request.POST['city']
 
-        URL = f'https://api.openweathermap.org/data/2.5/weather?q={city}&APPID=24cbe48a48d8bf0610dcd03339c6919a'
+        URL = f'https://api.openweathermap.org/data/2.5/weather?q={city}&APPID=YOURAPIKEY'
         response = requests.get(URL)
         data = response.json()
 
