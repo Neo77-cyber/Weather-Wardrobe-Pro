@@ -39,4 +39,4 @@ Contributions to the Weather Outfit Recommendation App project are welcome. If y
 
 ## Contact
 
-For any questions or inquiries, please contact [email protected].
+For any questions or inquiries, please contact ikponmwosaenabs@gmail.com.
