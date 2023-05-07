@@ -1,5 +1,3 @@
-# weatherecommendations
-
 # Weather Outfit Recommendation App
 
 The Weather Outfit Recommendation App is a web application that provides personalized outfit recommendations based on the current weather conditions. It helps users decide what to wear by suggesting suitable clothing options that match the weather forecast of their location. Whether it's a sunny day, rainy day, or cold winter day, this app ensures that users are dressed appropriately and comfortably.
