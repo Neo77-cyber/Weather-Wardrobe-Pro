@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Welcome to your Outfit recommendation app</h1>
+    {% if not outfit %}
+    <p><h4>Don't let your outfit choices leave you regretting your decision, Let our outfit recommendation app help you choose the perfect attire for the day</h4></p>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputText" class="form-label">City</label>
+          <input type="text" class="form-control" placeholder="City" name="city">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    {% if outfit %}
+        <p>Hello anonymous, if you're going out in {{city}} today,</p>
+        {% if temp_celsius <= 10 %}
+        You should consider wearing:<p>{{clothes_type}}</p> 
+        {% for item in outfit %}
+        <img src="{{ item.cold_weather_clothing.url }}" alt="Cold weather outfit" style="width: 200px; height: auto;">
+        {% endfor %}
+        {% else %}
+        You should consider wearing:<p>{{clothes_type}}</p> 
+        {% for item in outfit %}
+        <img src="{{ item.hot_weather_clothing.url }}" alt="Cold weather outfit" style="width: 200px; height: auto;">
+        {% endfor %} 
+        {% endif %}
+        <p><h4>Have fun out there and stay stylish!</h4></p>
+        
+    {% endif %}
+
+</body>
+</html>
