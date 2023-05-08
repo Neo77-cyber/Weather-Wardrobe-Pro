@@ -27,7 +27,7 @@ The Weather Outfit Recommendation App is a web application that provides persona
 
 ## Usage
 
-1. Upon accessing the app, users are prompted to provide their location information or allow the app to access their current location.
+1. Upon accessing the app, users are prompted to provide their location information.
 2. The app retrieves the current weather conditions for the user's location using the weather API.
 3. Based on the weather conditions, the app generates personalized outfit recommendations.
 
